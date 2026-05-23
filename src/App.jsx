@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import HeroSection from './components/HeroSection'
 import Projects from './components/Projects'
+import Skills from './components/Skills'
 import Achievements from './components/Achievements'
 import CursorGlow from './components/CursorGlow'
 
@@ -10,6 +11,7 @@ function App() {
       <CursorGlow />
       <HeroSection />
       <Projects />
+      <Skills />
       <Achievements />
     </div>
   )

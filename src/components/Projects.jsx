@@ -6,9 +6,29 @@ import nellai1 from '../assets/nellai1.jpeg';
 import nellai2 from '../assets/nellai2.jpeg';
 import ex1 from '../assets/ex1.jpeg';
 import ex2 from '../assets/ex2.jpeg';
+import genquiz1 from '../assets/genquiz1.png';
+import genquiz2 from '../assets/genquiz2.png';
+import genquiz3 from '../assets/genquiz3.png';
+import genquiz4 from '../assets/genquiz4.png';
+import genquiz5 from '../assets/genquiz5.png';
 import GlowButton from './GlowButton';
 
 const projects = [
+  {
+    id: 4,
+    title: "GENQUIZ – AI-Powered Multiplayer Quiz & Gaming Platform",
+    badge: "Full-Stack AI Platform",
+    description: "Developed a full-stack AI-powered multiplayer quiz and gaming platform using React, FastAPI, Supabase, and WebSocket integration. Built features including AI quiz generation, real-time multiplayer rooms, manual quiz creation, voice interaction, and interactive mini-games with responsive UI/UX and smooth animations.",
+    techStack: ["React", "FastAPI", "Supabase", "WebSockets", "Tailwind CSS"],
+    features: [
+      "AI quiz generation & custom room lobbies",
+      "Real-time multiplayer gaming with WebSocket synchronization",
+      "Interactive voice interaction & mini-games",
+      "Fully responsive modern glassmorphic interface"
+    ],
+    demoLink: "https://genquiz-iota.vercel.app",
+    images: [genquiz1, genquiz2, genquiz3, genquiz4, genquiz5]
+  },
   {
     id: 1,
     title: "Global Ontology Engine – AI-Powered Intelligence System",
