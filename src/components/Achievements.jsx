@@ -102,7 +102,7 @@ const Achievements = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8">
         
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -114,14 +114,14 @@ const Achievements = () => {
           <p className="text-neon-gold/80 font-orbitron tracking-[4px] uppercase mb-4 title-subtitle">
             Milestones
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-orbitron font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-orbitron font-bold text-white mb-6">
             Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-gold to-neon-cyan">Achievements</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-gold to-neon-cyan mx-auto rounded-full" />
         </motion.div>
 
         {/* Carousel Container */}
-        <div className="relative h-[650px] sm:h-[750px] md:h-[800px] lg:h-[850px] w-full flex items-center justify-center">
+        <div className="relative h-[480px] sm:h-[650px] md:h-[750px] lg:h-[850px] w-full flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -134,7 +134,7 @@ const Achievements = () => {
               <div className="w-full h-full flex flex-col bg-[#ffffff05] border border-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(255,215,0,0.1)] hover:shadow-[0_0_60px_rgba(0,240,255,0.2)] transition-shadow duration-500">
                 
                 {/* Image Section */}
-                <div className="w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] relative overflow-hidden group bg-[#030014]/60 flex-shrink-0 flex items-center justify-center p-4">
+                <div className="w-full h-[240px] sm:h-[350px] md:h-[450px] lg:h-[600px] relative overflow-hidden group bg-[#030014]/60 flex-shrink-0 flex items-center justify-center p-2 sm:p-4">
                   <img
                     src={achievements[currentIndex].image}
                     alt={achievements[currentIndex].title}
@@ -145,7 +145,7 @@ const Achievements = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="w-full flex-1 p-6 md:p-8 flex flex-col justify-center items-center sm:items-start relative z-20 overflow-y-auto">
+                <div className="w-full flex-1 p-4 sm:p-6 md:p-8 flex flex-col justify-center items-center sm:items-start relative z-20 overflow-y-auto">
                   
                   <div className="mb-3 inline-block">
                      <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-neon-gold/10 text-neon-gold border border-neon-gold/20 shadow-[0_0_15px_rgba(255,215,0,0.15)]">
@@ -153,11 +153,11 @@ const Achievements = () => {
                      </span>
                   </div>
                   
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-poppins font-bold text-white mb-3 text-center sm:text-left leading-tight">
+                  <h3 className="text-lg sm:text-2xl md:text-3xl font-poppins font-bold text-white mb-2 sm:mb-3 text-center sm:text-left leading-tight">
                     {achievements[currentIndex].title}
                   </h3>
                   
-                  <p className="text-gray-300 font-inter text-sm md:text-base leading-relaxed text-center sm:text-left max-w-4xl">
+                  <p className="text-gray-300 font-inter text-xs sm:text-sm md:text-base leading-relaxed text-center sm:text-left max-w-4xl">
                     {achievements[currentIndex].description}
                   </p>
                 </div>

@@ -97,11 +97,11 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7, delay: 0.1 }}
-      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-stretch mb-24 w-full`}
+      className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-10 items-stretch mb-16 sm:mb-24 w-full`}
     >
       {/* Image Section */}
-      <div className="flex-1 w-full lg:w-1/2 relative group rounded-2xl overflow-hidden border border-white/10 bg-[#ffffff05] shadow-[0_0_30px_rgba(0,240,255,0.05)] pt-6 pb-6 px-6 flex flex-col justify-center min-h-[400px]">
-        <div className="relative w-full h-[300px] sm:h-[400px] rounded-xl overflow-hidden cursor-pointer" onClick={nextImage}>
+      <div className="flex-1 w-full lg:w-1/2 relative group rounded-2xl overflow-hidden border border-white/10 bg-[#ffffff05] shadow-[0_0_30px_rgba(0,240,255,0.05)] p-3 sm:p-6 flex flex-col justify-center min-h-[280px] sm:min-h-[400px]">
+        <div className="relative w-full h-[220px] sm:h-[300px] md:h-[400px] rounded-xl overflow-hidden cursor-pointer" onClick={nextImage}>
           <motion.img
             key={currentImage}
             initial={{ opacity: 0, scale: 1.05 }}
@@ -130,15 +130,15 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       {/* Text Section */}
-      <div className="flex-1 w-full lg:w-1/2 flex flex-col justify-center space-y-6">
+      <div className="flex-1 w-full lg:w-1/2 flex flex-col justify-center space-y-4 sm:space-y-6">
         <div>
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-neon-purple/10 text-neon-purple border border-neon-purple/30 mb-4 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
             {project.badge}
           </span>
-          <h3 className="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-4 leading-tight">
+          <h3 className="text-xl sm:text-3xl md:text-4xl font-orbitron font-bold text-white mb-3 sm:mb-4 leading-tight">
             {project.title}
           </h3>
-          <p className="text-gray-300 font-inter text-sm sm:text-base leading-relaxed mb-6">
+          <p className="text-gray-300 font-inter text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
             {project.description}
           </p>
         </div>
@@ -219,7 +219,7 @@ const Projects = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
            initial={{ opacity: 0, y: -20 }}

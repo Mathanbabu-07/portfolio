@@ -58,15 +58,15 @@ const SkillCard = ({ name, percentage, tags, index, colorClass, gradientId, grad
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: isInView ? 1 : 0.3, y: isInView ? 0 : 15 }}
       transition={{ duration: 0.5 }}
-      className={`relative flex items-center justify-between p-6 rounded-2xl bg-[#ffffff02] border border-white/5 backdrop-blur-md transition-all duration-500 group ${borderGlow}`}
+      className={`relative flex items-center justify-between p-4 sm:p-6 rounded-2xl bg-[#ffffff02] border border-white/5 backdrop-blur-md transition-all duration-500 group ${borderGlow}`}
     >
-      <div className="flex-1 pr-4">
-        <h4 className="text-lg font-poppins font-bold text-white mb-2 tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors duration-300">
+      <div className="flex-1 pr-3 sm:pr-4 min-w-0">
+        <h4 className="text-sm sm:text-lg font-poppins font-bold text-white mb-2 tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors duration-300">
           {name}
         </h4>
-        <div className="flex flex-wrap gap-2 mt-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
           {tags.map((tag, i) => (
-            <span key={i} className="text-[10px] uppercase font-semibold font-orbitron tracking-wider text-gray-400 bg-white/5 border border-white/5 px-2 py-0.5 rounded">
+            <span key={i} className="text-[9px] sm:text-[10px] uppercase font-semibold font-orbitron tracking-wider text-gray-400 bg-white/5 border border-white/5 px-1.5 sm:px-2 py-0.5 rounded">
               {tag}
             </span>
           ))}
@@ -74,7 +74,7 @@ const SkillCard = ({ name, percentage, tags, index, colorClass, gradientId, grad
       </div>
 
       {/* SVG Circular Gauge */}
-      <div className="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+      <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 flex items-center justify-center">
         <svg className="w-full h-full transform -rotate-90">
           <defs>
             <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -216,7 +216,7 @@ const Skills = () => {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -235,21 +235,21 @@ const Skills = () => {
         </motion.div>
 
         {/* Balanced Two-Column Grid (1 column of lists per track) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Column 1 — Data Science & Analytics */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <motion.h3
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl font-orbitron font-bold text-white border-l-4 border-neon-cyan pl-4 mb-8 flex items-center gap-3"
+              className="text-lg sm:text-2xl font-orbitron font-bold text-white border-l-4 border-neon-cyan pl-3 sm:pl-4 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-neon-cyan"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
               Data Science & Analytics
             </motion.h3>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
               {dataScienceSkills.map((skill, index) => (
                 <SkillCard key={skill.name} {...skill} index={index} />
               ))}
@@ -257,19 +257,19 @@ const Skills = () => {
           </div>
 
           {/* Column 2 — AI & Web Engineering */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <motion.h3
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl font-orbitron font-bold text-white border-l-4 border-neon-purple pl-4 mb-8 flex items-center gap-3"
+              className="text-lg sm:text-2xl font-orbitron font-bold text-white border-l-4 border-neon-purple pl-3 sm:pl-4 mb-6 sm:mb-8 flex items-center gap-2 sm:gap-3"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-neon-purple"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
               AI & Web Engineering
             </motion.h3>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6">
               {aiWebSkills.map((skill, index) => (
                 <SkillCard key={skill.name} {...skill} index={index} />
               ))}

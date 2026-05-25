@@ -4,12 +4,12 @@ import TypingEffect from './TypingEffect'
 import ProfileImage from './ProfileImage'
 import GlowButton from './GlowButton'
 import SocialIcons, { GithubIcon, LinkedinIcon, EmailIcon, LocationIcon, PhoneIcon } from './SocialIcons'
-import profileImg from '../assets/me.jpeg'
+import profileImg from '../assets/profile_new.jpeg'
 
 const roles = [
   'Aspiring Data Scientist',
   'Data Analyst',
-  'AI Enthusiast',
+  'AI Engineer',
 ]
 
 const socialLinks = [
@@ -29,7 +29,7 @@ const socialLinks = [
     label: 'Email',
   },
   {
-    url: 'tel:+916381234567',
+    url: 'tel:+918270152417',
     icon: <PhoneIcon />,
     label: 'Phone',
   },
@@ -103,12 +103,12 @@ const HeroSection = () => {
       />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16">
 
           {/* Left Side — Text Content */}
           <motion.div
-            className="flex-1 text-center lg:text-left max-w-2xl"
+            className="flex-1 text-center lg:text-left max-w-2xl order-2 lg:order-1"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -126,13 +126,13 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-sm sm:text-base text-neon-cyan/70 font-orbitron tracking-[4px] uppercase mb-3"
             >
-              Hello, I'm
+              Hello, I&apos;m
             </motion.p>
 
             {/* Name */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-orbitron font-bold gradient-name leading-tight mb-4"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-orbitron font-bold gradient-name leading-tight mb-4"
             >
               Mathan Babu S
             </motion.h1>
@@ -140,7 +140,7 @@ const HeroSection = () => {
             {/* Typing Effect */}
             <motion.div
               variants={itemVariants}
-              className="text-xl sm:text-2xl md:text-3xl font-poppins font-semibold mb-6 min-h-[44px]"
+              className="text-lg sm:text-2xl md:text-3xl font-poppins font-semibold mb-4 sm:mb-6 min-h-[36px] sm:min-h-[44px]"
             >
               <TypingEffect strings={roles} speed={80} deleteSpeed={40} pauseTime={2000} />
             </motion.div>
@@ -148,9 +148,9 @@ const HeroSection = () => {
             {/* Intro Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-sm sm:text-base text-gray-400 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 font-inter"
+              className="text-xs sm:text-sm md:text-base text-gray-400 leading-relaxed mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 font-inter"
             >
-              Aspiring Data Scientist with a strong interest in turning data into meaningful insights. 
+              Aspiring Data Scientist and AI Engineer with a strong interest in turning data into meaningful insights. 
               Skilled in data analysis and data science, with hands-on experience in data visualization 
               using Python and Power BI. Proficient in web scraping, API integration, and web development 
               with Agentic AI — building intelligent and interactive applications.
@@ -159,7 +159,7 @@ const HeroSection = () => {
             {/* Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8"
             >
               <GlowButton variant="primary" href="#projects">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -182,12 +182,12 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Social Links — Icons */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
               <SocialIcons links={socialLinks} />
             </motion.div>
 
             {/* Explicit Contact Info */}
-            <motion.div variants={itemVariants} className="contact-info-grid">
+            <motion.div variants={itemVariants} className="contact-info-grid mx-auto lg:mx-0">
               <a href="https://github.com/Mathanbabu-07" target="_blank" rel="noopener noreferrer" className="contact-info-item">
                 <GithubIcon />
                 <div className="contact-info-text">
@@ -209,11 +209,11 @@ const HeroSection = () => {
                   <span className="contact-info-value">s.mathanbabu2007@gmail.com</span>
                 </div>
               </a>
-              <a href="tel:+916381234567" className="contact-info-item">
+              <a href="tel:+918270152417" className="contact-info-item">
                 <PhoneIcon />
                 <div className="contact-info-text">
                   <span className="contact-info-label">Phone</span>
-                  <span className="contact-info-value">+91 63812 34567</span>
+                  <span className="contact-info-value">+91 82701 52417</span>
                 </div>
               </a>
             </motion.div>
@@ -221,12 +221,12 @@ const HeroSection = () => {
 
           {/* Right Side — Profile Image */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 order-1 lg:order-2"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
           >
-            <ProfileImage src={profileImg} alt="Mathan Babu S — Aspiring Data Scientist" />
+            <ProfileImage src={profileImg} alt="Mathan Babu S — Aspiring Data Scientist and AI Engineer" />
           </motion.div>
         </div>
       </div>
